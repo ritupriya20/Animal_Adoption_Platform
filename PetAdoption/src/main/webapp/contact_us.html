@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            margin: 40px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        select, input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form action="ContactUsServlet" method="post">
+        <label>User Type:</label>
+        <select name="userType">
+            <option value="adopter">Adopter</option>
+            <option value="animal_lister">Animal Lister</option>
+        </select><br>
+
+        <label>Name:</label>
+        <input type="text" name="userName" required><br>
+
+        <label>Email:</label>
+        <input type="email" name="userEmail" required><br>
+
+        <label>Subject:</label>
+        <input type="text" name="subject" required><br>
+
+        <label>Message:</label>
+        <textarea name="message" rows="4" required></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
